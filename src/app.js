@@ -1,6 +1,8 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
 var compliments = ["Good lookin'.", "Beautiful.", "Lovely.", "Gorgeous.", "Marvelous.", "Stunning.", "Wonderful.",  "Looking dapper."];
 var preCompliments = ["Good day, ", "Hello, ", "Hi, ", "Hey, ", "What's happening, ", "Woah! You're ", "Bonjour, ",  "Cheerio, "];
 var complimentPicker = Math.floor(Math.random() * (compliments.length - 0)) + 0;
@@ -9,11 +11,8 @@ var chosenComp = compliments[complimentPicker];
 
 //create date variables
 var d = new Date();
-var curr_date = d.getDate();
-var curr_month = d.getMonth();
-var curr_year = d.getFullYear();
 
-var dateOutput = curr_date + " . " + curr_month + " . " + curr_year;
+var dateOutput = d.getDate() + " . " + months[d.getMonth()] + " . " + d.getFullYear();
 
 var window = new UI.Window();
 
