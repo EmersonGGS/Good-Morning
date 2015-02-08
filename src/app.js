@@ -1,13 +1,6 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 
-var main = new UI.Card({
-  title: "",
-  icon: '',
-  subtitle: '',
-  body: ''
-});
-
 var compliments = ["Good lookin'.", "Beautiful.", "Lovely.", "Gorgeous.", "Marvelous.", "Stunning.", "Wonderful.",  "Looking dapper."];
 var preCompliments = ["Good day, ", "Hello, ", "Hi, ", "Hey, ", "What's happening, ", "Woah! You're ", "Bonjour, ",  "Cheerio, "];
 var complimentPicker = Math.floor(Math.random() * (compliments.length - 0)) + 0;
@@ -68,7 +61,6 @@ var timeText = new UI.TimeText({
   textAlign: 'center'
 });
 
-main.show();
 window.add(timeText);
 window.add(dateText);
 window.add(whiteBG);
